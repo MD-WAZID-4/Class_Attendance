@@ -18,3 +18,24 @@ function updateTime() {
 }
 updateTime();
 setInterval(updateTime, 1000);
+
+const btn_1 = document.getElementById('b1');
+const container = document.querySelector('.content');
+
+
+btn_1.addEventListener('click', () => {
+  
+  const existingDiv = container.querySelector('.absent-div');
+  
+  if (existingDiv) {
+    
+    existingDiv.remove();
+  } else {
+    
+    const absentDiv = document.createElement('div');
+    absentDiv.textContent = 'absent';
+    absentDiv.className = 'absent-div';
+    container.appendChild(absentDiv);
+  }
+});
+
