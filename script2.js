@@ -240,36 +240,170 @@ setInterval(updateTime, 1000);
 // });
 
 
+// function handleButtonClick(buttonId) {
+//   const button = document.getElementById(buttonId);
+//   const row = button.closest('.content-row');
+//   const existingDiv = row.querySelector('.status-div');
+
+//   if (existingDiv) {
+//     existingDiv.remove();
+//   } else {
+//     const statusDiv = document.createElement('div');
+//     statusDiv.textContent = 'Absent';
+//     statusDiv.className = 'status-div';
+//     statusDiv.dataset.status = 'absent'; 
+//     button.closest('.time-slot').insertAdjacentElement('afterend', statusDiv);
+//   }
+// }
+
+
+// for (let i = 1; i <= 10; i++) {
+//   const btn = document.getElementById(`b${i}`);
+//   btn.addEventListener('click', () => handleButtonClick(`b${i}`));
+// }
+
+// document.getElementById('submitBtn').addEventListener('click', () => {
+//   document.querySelectorAll('.content-row').forEach(row => {
+//     if (!row.querySelector('.status-div')) {
+//       const statusDiv = document.createElement('div');
+//       statusDiv.textContent = 'Present';
+//       statusDiv.className = 'status-div';
+//       statusDiv.dataset.status = 'present'; 
+//       row.querySelector('.time-slot:last-child').insertAdjacentElement('afterend', statusDiv);
+//     }
+//   });
+// });
+
+
+
+// function handleButton(buttonId) {
+//   const button = document.getElementById(buttonId);
+//   const row = button.closest('.content-row');
+//   const existingDiv = row.querySelector('.status-div_2');
+
+//   if (existingDiv) {
+//     existingDiv.remove();
+//   } else {
+//     const statusDiv = document.createElement('div');
+//     statusDiv.textContent = 'Absent';
+//     statusDiv.className = 'status-div_2';
+//     statusDiv.dataset.status = 'absent'; 
+//     button.closest('.time-slot').insertAdjacentElement('afterend', statusDiv);
+//   }
+// }
+
+
+// for (let i = 1; i <= 10; i++) {
+//   const btn = document.getElementById(`a${i}`);
+//   btn.addEventListener('click', () => handleButton(`a${i}`));
+// }
+
+// document.getElementById('submitBtn_2').addEventListener('click', () => {
+//   document.querySelectorAll('.content-row').forEach(row => {
+//     if (!row.querySelector('.status-div_2')) {
+//       const statusDiv = document.createElement('div');
+//       statusDiv.textContent = 'Present';
+//       statusDiv.className = 'status-div_2';
+//       statusDiv.dataset.status = 'present'; 
+//       row.querySelector('.time-slot:last-child').insertAdjacentElement('afterend', statusDiv);
+//     }
+//   });
+// });
+
+
+// First time slot (9:00AM - 10:00AM) - b1-b10 buttons
 function handleButtonClick(buttonId) {
   const button = document.getElementById(buttonId);
-  const row = button.closest('.content-row');
-  const existingDiv = row.querySelector('.status-div');
-
-  if (existingDiv) {
-    existingDiv.remove();
-  } else {
-    const statusDiv = document.createElement('div');
-    statusDiv.textContent = 'Absent';
-    statusDiv.className = 'status-div';
-    statusDiv.dataset.status = 'absent'; 
-    button.closest('.time-slot').insertAdjacentElement('afterend', statusDiv);
+  const timeSlot = button.closest('.time-slot-1');
+  const statusPosition = timeSlot.nextElementSibling;
+  
+  // Remove existing status if it exists
+  if (statusPosition && statusPosition.classList.contains('status-div-1')) {
+    statusPosition.remove();
+    return;
   }
+  
+  // Create new Absent div
+  const statusDiv = document.createElement('div');
+  statusDiv.textContent = 'Absent';
+  statusDiv.className = 'status-div-1';
+  statusDiv.dataset.status = 'absent';
+  timeSlot.insertAdjacentElement('afterend', statusDiv);
 }
 
+// Second time slot (10:00AM - 11:00AM) - a1-a10 buttons
+function handleButton(buttonId) {
+  const button = document.getElementById(buttonId);
+  const timeSlot = button.closest('.time-slot-2');
+  const statusPosition = timeSlot.nextElementSibling;
+  
+  // Remove existing status if it exists
+  if (statusPosition && statusPosition.classList.contains('status-div-2')) {
+    statusPosition.remove();
+    return;
+  }
+  
+  // Create new Absent div
+  const statusDiv = document.createElement('div');
+  statusDiv.textContent = 'Absent';
+  statusDiv.className = 'status-div-2';
+  statusDiv.dataset.status = 'absent';
+  timeSlot.insertAdjacentElement('afterend', statusDiv);
+}
 
+// Initialize all buttons
 for (let i = 1; i <= 10; i++) {
-  const btn = document.getElementById(`b${i}`);
-  btn.addEventListener('click', () => handleButtonClick(`b${i}`));
+  // First time slot buttons
+  const btn1 = document.getElementById(`b${i}`);
+  if (btn1) btn1.addEventListener('click', () => handleButtonClick(`b${i}`));
+  
+  // Second time slot buttons
+  const btn2 = document.getElementById(`a${i}`);
+  if (btn2) btn2.addEventListener('click', () => handleButton(`a${i}`));
 }
 
+// First submit button (for 9:00AM - 10:00AM)
 document.getElementById('submitBtn').addEventListener('click', () => {
   document.querySelectorAll('.content-row').forEach(row => {
-    if (!row.querySelector('.status-div')) {
+    const timeSlot = row.querySelector('.time-slot-1');
+    const nextElement = timeSlot.nextElementSibling;
+    
+    // Only add if no status exists or if it's the wrong type
+    if (!nextElement || !nextElement.classList.contains('status-div-1')) {
+      // Remove any existing status div first
+      if (nextElement && (nextElement.classList.contains('status-div-1') || 
+                         nextElement.classList.contains('status-div-2'))) {
+        nextElement.remove();
+      }
+      
       const statusDiv = document.createElement('div');
       statusDiv.textContent = 'Present';
-      statusDiv.className = 'status-div';
-      statusDiv.dataset.status = 'present'; 
-      row.querySelector('.time-slot:last-child').insertAdjacentElement('afterend', statusDiv);
+      statusDiv.className = 'status-div-1';
+      statusDiv.dataset.status = 'present';
+      timeSlot.insertAdjacentElement('afterend', statusDiv);
+    }
+  });
+});
+
+// Second submit button (for 10:00AM - 11:00AM)
+document.getElementById('submitBtn_2').addEventListener('click', () => {
+  document.querySelectorAll('.content-row').forEach(row => {
+    const timeSlot = row.querySelector('.time-slot-2');
+    const nextElement = timeSlot.nextElementSibling;
+    
+    // Only add if no status exists or if it's the wrong type
+    if (!nextElement || !nextElement.classList.contains('status-div-2')) {
+      // Remove any existing status div first
+      if (nextElement && (nextElement.classList.contains('status-div-1') || 
+                         nextElement.classList.contains('status-div-2'))) {
+        nextElement.remove();
+      }
+      
+      const statusDiv = document.createElement('div');
+      statusDiv.textContent = 'Present';
+      statusDiv.className = 'status-div-2';
+      statusDiv.dataset.status = 'present';
+      timeSlot.insertAdjacentElement('afterend', statusDiv);
     }
   });
 });

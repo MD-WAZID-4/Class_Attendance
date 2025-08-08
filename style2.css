@@ -336,6 +336,7 @@ main {
    cursor: pointer;
 }
 
+
 .horizontal_l {
     display: block;
     position: absolute;
@@ -709,7 +710,7 @@ main {
  */
 
 
-.status-div {
+.status-div-1{
    display: flex;
    justify-content: center;
    align-items: center;
@@ -723,18 +724,47 @@ main {
 }
 
 
-.status-div[data-status="absent"] {
+.status-div-1[data-status="absent"] {
   background-color: rgb(55 2 2);
   margin-left: 515px; 
   margin-top:-35px;
 }
 
 
-.status-div[data-status="present"] {
+.status-div-1[data-status="present"] {
   background-color: rgb(7 34 17);  
   margin-left: 515px; 
   margin-top:-35px;
 }
+
+
+.status-div-2 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   width: 60px;
+   height: 26px;
+   color: white;
+   border: 1px solid rgb(255 255 255);
+   outline: none; 
+   border-radius:4px;
+}
+
+
+.status-div-2[data-status="absent"] {
+  background-color: rgb(55 2 2);
+  margin-left: 735px; 
+  margin-top:-35px;
+}
+
+
+.status-div-2[data-status="present"] {
+  background-color: rgb(7 34 17);  
+  margin-left: 735px; 
+  margin-top:-35px;
+}
+
 
 
  
