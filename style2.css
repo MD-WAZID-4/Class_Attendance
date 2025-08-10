@@ -492,6 +492,7 @@ main {
    border: 1px solid rgb(255 255 255);
    outline: none; 
    border-radius:4px;
+   cursor: pointer;
 }
 
 .submit_2 {
@@ -505,9 +506,10 @@ main {
    border: 1px solid rgb(255 255 255);
    outline: none; 
    border-radius:4px;
+   cursor: pointer;
 }
 
-.copy_1 {
+.copyBtn {
    position: absolute;
    width: 60px;
    height: 26px;
@@ -518,196 +520,8 @@ main {
    border: 1px solid rgb(255 255 255);
    outline: none; 
    border-radius:4px;
+   cursor: pointer;
 }
-
-/* .b1{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 89px;
-   color: white;
-   background-color: rgb(55 2 2);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-}
-
-
-.b2{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 140px;
-   color: white;
-   background-color: rgb(55 2 2);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-}
-
-
-.b3{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 191px;
-   color: white;
-   background-color: rgb(55 2 2);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-}
-
-
-.b4{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 240px;
-   color: white;
-   background-color: rgb(55 2 2);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-
-}
-
-
-
-.b5{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 290px;
-   color: white;
-   background-color: rgb(55 2 2);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-}
-
-
-.b6{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 340px;
-   color: white;
-   background-color: rgb(55 2 2);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-}
-
-
-
-.b7{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 390px;
-   color: white;
-   background-color: rgb(55 2 2);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-}
-
-
-
-.b8{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 440px;
-   color: white;
-   background-color: rgb(55 2 2);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-}
-
-
-
-.b9{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 491px;
-   color: white;
-   background-color: rgb(55 2 2);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-}
-
-
-
-.b10{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   width: 60px;
-   height: 26px;
-   margin-left: 510px;
-   margin-top: 541px;
-   color: white;
-   background-color: rgb(7 34 17);
-   border: 1px solid rgb(255 255 255);
-   outline: none; 
-   border-radius:4px;
-
-}
-
-
-
- */
 
 
 .status-div-1{
@@ -764,6 +578,10 @@ main {
   margin-left: 735px; 
   margin-top:-35px;
 }
+
+
+ 
+
 
 
 
