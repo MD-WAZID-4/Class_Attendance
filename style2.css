@@ -336,6 +336,22 @@ main {
    cursor: pointer;
 }
 
+.time-slot-2 .btn {
+   position: absolute;
+   width: 60px;
+   height: 26px;
+   margin-left: -64px;
+   margin-top: -6px;
+   color: white;
+   background-color: rgb(2 1 23);
+   border: 1px solid rgb(255 255 255);
+   outline: none; 
+   border-radius:4px;
+   cursor: pointer;
+}
+
+
+
 
 .horizontal_l {
     display: block;
@@ -499,7 +515,7 @@ main {
    position: absolute;
    width: 60px;
    height: 26px;
-   margin-left: 640px;
+   margin-left: 630px;
    margin-top: 600px;
    color: white;
    background-color:#1a334c;
@@ -513,7 +529,7 @@ main {
    position: absolute;
    width: 60px;
    height: 26px;
-   margin-left: 740px;
+   margin-left: 725px;
    margin-top: 600px;
    color: white;
    background-color:#1a334c;
@@ -523,6 +539,34 @@ main {
    cursor: pointer;
 }
 
+
+.clear_1 {
+   position: absolute;
+   width: 60px;
+   height: 26px;
+   margin-left: 518px;
+   margin-top: 600px;
+   color: white;
+   background-color:#1a334c;
+   border: 1px solid rgb(255 255 255);
+   outline: none; 
+   border-radius:4px;
+   cursor: pointer;
+}
+
+.clear_2 {
+   position: absolute;
+   width: 60px;
+   height: 26px;
+   margin-left:820px;
+   margin-top: 600px;
+   color: white;
+   background-color:#1a334c;
+   border: 1px solid rgb(255 255 255);
+   outline: none; 
+   border-radius:4px;
+   cursor: pointer;
+}
 
 .status-div-1{
    display: flex;
@@ -578,6 +622,42 @@ main {
   margin-left: 735px; 
   margin-top:-35px;
 }
+
+.store_data{
+
+   position: absolute;
+   width: 90px;
+   height: 26px;
+   margin-left:20px;
+   margin-top: 600px;
+   color: white;
+   background-color:#1a334c;
+   border: 1px solid rgb(255 255 255);
+   outline: none; 
+   border-radius:4px;
+   cursor: pointer;
+
+
+}
+
+
+.store_page{
+
+   position: absolute;
+   width: 90px;
+   height: 26px;
+   margin-left:225px;
+   margin-top: 600px;
+   color: white;
+   background-color:#1a334c;
+   border: 1px solid rgb(255 255 255);
+   outline: none; 
+   border-radius:4px;
+   cursor: pointer;
+
+
+}
+
 
 
  
